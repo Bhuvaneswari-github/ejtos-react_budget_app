@@ -7,6 +7,7 @@ const AllocationForm = (props) => {
     const [name, setName] = useState('');
     const [cost, setCost] = useState('');
     const [action, setAction] = useState('');
+   // const { budget } = useContext(AppContext);
 
     const submitEvent = () => {
 
@@ -61,7 +62,7 @@ const AllocationForm = (props) => {
         
 
                   
-                  £<input
+                  $<input
                         required='required'
                         type='number'
                         id='cost'
@@ -69,6 +70,7 @@ const AllocationForm = (props) => {
                         style={{ marginLeft: '2rem' , size: 10}}
                         onChange={(event) => setCost(event.target.value)}>
                         </input>
+                
 
                     <button className="btn btn-primary" onClick={submitEvent} style={{ marginLeft: '2rem' }}>
                         Save
